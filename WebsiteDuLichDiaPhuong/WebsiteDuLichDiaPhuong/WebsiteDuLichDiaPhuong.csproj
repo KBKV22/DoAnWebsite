@@ -140,7 +140,6 @@
     <Compile Include="Models\HINHANH.cs" />
     <Compile Include="Models\HUYEN.cs" />
     <Compile Include="Models\KHACHSAN.cs" />
-    <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Models\TAIKHOAN.cs" />
     <Compile Include="Models\THELOAITIN.cs" />
     <Compile Include="Models\TINTUC.cs" />
@@ -523,6 +522,11 @@
     <Content Include="Views\Admin\SuaQuanHuyen.cshtml" />
     <Content Include="Views\Admin\ChiTietQuanHuyen.cshtml" />
     <Content Include="Views\Admin\XoaQuanHuyen.cshtml" />
+    <Content Include="Views\Admin\DanhSachKhachSan.cshtml" />
+    <Content Include="Views\Admin\SuaKhachSan.cshtml" />
+    <Content Include="Views\Admin\ThemKhachSanMoi.cshtml" />
+    <Content Include="Views\Admin\ChiTietKhachSan.cshtml" />
+    <Content Include="Views\Admin\XoaKhachSan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

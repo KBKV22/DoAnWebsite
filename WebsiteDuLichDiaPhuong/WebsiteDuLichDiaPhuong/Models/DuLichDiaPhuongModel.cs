@@ -16,7 +16,6 @@ namespace WebsiteDuLichDiaPhuong.Models
         public virtual DbSet<HINHANH> HINHANHs { get; set; }
         public virtual DbSet<HUYEN> HUYENs { get; set; }
         public virtual DbSet<KHACHSAN> KHACHSANs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TAIKHOAN> TAIKHOANs { get; set; }
         public virtual DbSet<THELOAITIN> THELOAITINs { get; set; }
         public virtual DbSet<TINTUC> TINTUCs { get; set; }

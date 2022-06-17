@@ -1,0 +1,57 @@
+﻿@model WebsiteDuLichDiaPhuong.Models.KHACHSAN
+
+@{
+    ViewBag.Title = "XoaKhachSan";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>XÓA KHÁCH SẠN</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+ 
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SĐT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SĐT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaHuyen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaHuyen)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-warning" /> |
+            @Html.ActionLink("Quay về", "DanhSachKhachSan", "Admin", new {@class="btn btn-danger"})
+        </div>
+    }
+</div>

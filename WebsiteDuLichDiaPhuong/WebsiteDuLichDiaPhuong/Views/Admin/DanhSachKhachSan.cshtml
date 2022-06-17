@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebsiteDuLichDiaPhuong.Models.KHACHSAN>
+@{
+    ViewBag.Title = "DanhSachKhachSan";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+
+<h2 style="padding-top: 20px; margin-left: 10px">DANH SÁCH KHÁCH SẠN</h2>
+<p style="margin-left: 10px"></p>
+
+<table class="table table-bordered table-hover" border="2px" style=" padding-top: 30px; margin-left: 10px; margin-right: 20px">
+    <tr>
+        <th style="text-align: center; margin-left: 10px">
+            Tên khách sạn
+        </th>
+        <th style="text-align: center">
+            Địa chỉ
+        </th>
+        <th style="text-align: center">
+            Số điện thoại
+        </th>
+        <th style="text-align: center">
+            Tên huyện
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="text-align: center">
+                @Html.DisplayFor(modelItem => item.TenKS)
+            </td>
+            <td style="text-align: center">
+                @Html.DisplayFor(modelItem => item.DiaChi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SĐT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HUYEN.TenHuyen)
+            </td>
+            <td>
+                @Html.ActionLink("Tạo mới", "ThemKhachSanMoi", "Admin", new { @class = "btn btn-success" })
+                @Html.ActionLink("Chỉnh sửa", "SuaKhachSan", new { id = item.MaKS }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Chi tiết", "ChiTietKhachSan", new { id = item.MaKS }, new { @class = "btn btn-warning" })
+                @Html.ActionLink("Xóa", "XoaKhachSan", new { id = item.MaKS }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>
+
